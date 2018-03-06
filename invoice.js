@@ -2,35 +2,26 @@ import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import RaisedButton from 'material-ui/RaisedButton';
+import logo from './logo.svg';
 import TextField from 'material-ui/TextField';
 import axios from 'axios';
-class Feedback extends Component {
+class Invoice extends Component {
   constructor(props){
     super(props);
     this.state={
-      feedback:'',
-	  
-          }
+      
+    }
   }
-  
-  
   render() {
     return (
       <div>
         <MuiThemeProvider>
           <div>
           <AppBar
-             title="Feedback"
+             title="Invoice"
            />
-            Leave your feedback here...<br/>
-          <input type="text" value={this.state.value} onChange={this.handleChange}  />
-
-           <br/>
            
-             
-           <RaisedButton label="Submit" primary={true} style={style} onClick={(event) => this.handleClick(event)}/>
-		   <RaisedButton label="Cancel" primary={true} style={style} onClick={(event) => this.handleClick(event)}/>
-
+            
 
           </div>
          </MuiThemeProvider>
@@ -41,4 +32,4 @@ class Feedback extends Component {
 const style = {
   margin: 15,
 };
-export default Feedback;
+export default Invoice;
